@@ -1,7 +1,7 @@
 {
-  "name": "@matrix-plane/ibro-cli",
+  "name": "@ibroai/the-matrix-operator",
   "version": "0.1.0",
-  "description": "Framework-style CLI to drop ibroOS modules into any project",
+  "description": "Framework-style CLI to drop construct modules into any project",
   "license": "MIT",
   "private": false,
   "type": "module",

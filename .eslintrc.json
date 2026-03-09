@@ -2,6 +2,6 @@
   "root": true,
   "rules": { "no-console": "error" },
   "overrides": [
-    { "files": ["**/clis/**"], "rules": { "no-console": "off" } }
+    { "files": ["**/clis/**", "**/operator/**"], "rules": { "no-console": "off" } }
   ]
 }

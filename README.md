@@ -21,7 +21,7 @@ construct  = The Construct    Pure potentie. Alle modules, templates,
                               structuur. Geen runtime, geen actie.
 
 operator   = The Operator     Tank/Link. Zit aan de console, laadt
-                              wat je nodig hebt. ibro init = jack in.
+                              wat je nodig hebt. operator init = jack in.
 ```
 
 ---
@@ -50,8 +50,8 @@ install module        →  "Load the jump program"
 registry.json         →  "The Source"
 module.json           →  "Program manifest"
 payload/ folder       →  "Training data"
-ibro init             →  "Jacking in"
-ibro add <module>     →  "Upload the training program"
+operator init         →  "Jacking in"
+operator add <module> →  "Upload the training program"
 ```
 
 ---
@@ -60,13 +60,13 @@ ibro add <module>     →  "Upload the training program"
 
 ```bash
 # Jack in — initialize governance
-ibro init
+operator init
 
 # Load training programs
-ibro add redpill        # base governance
-ibro add kung-fu        # code rules
-ibro add oracle         # review protocol
-ibro add sentinel       # test policy
+operator add redpill        # base governance
+operator add kung-fu        # code rules
+operator add oracle         # review protocol
+operator add sentinel       # test policy
 
 # Your project now has The Matrix
 ls ai/

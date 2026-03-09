@@ -81,6 +81,16 @@
         "ref": "main",
         "path": "packages/construct/modules/ai-review"
       }
+    },
+    "ai-nmi": {
+      "latest": "0.1.0",
+      "description": "Narrative Memory Injection — behavioral memory state machine",
+      "source": {
+        "type": "github",
+        "repo": "ibroAi/matrix-plane",
+        "ref": "main",
+        "path": "packages/construct/modules/ai-nmi"
+      }
     }
   }
 }

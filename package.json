@@ -5,8 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build -w @ibroai/the-matrix-operator",
-    "test": "npm test -w @ibroai/the-matrix-operator"
+    "build": "npm run build -w @ibroai/operator",
+    "test": "npm test -w @ibroai/operator"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"

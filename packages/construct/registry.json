@@ -7,9 +7,9 @@
       "description": "Universal AI governance folder (/ai) for any project",
       "source": {
         "type": "github",
-        "repo": "ibroAi/construct",
+        "repo": "ibroAi/matrix-plane",
         "ref": "main",
-        "path": "modules/ai"
+        "path": "packages/construct/modules/ai"
       }
     },
     "ai-code": {
@@ -17,9 +17,9 @@
       "description": "Code-specific add-on for /ai (snapshots, review rules, checklists)",
       "source": {
         "type": "github",
-        "repo": "ibroAi/construct",
+        "repo": "ibroAi/matrix-plane",
         "ref": "main",
-        "path": "modules/ai-code"
+        "path": "packages/construct/modules/ai-code"
       }
     },
     "ai-vcon": {
@@ -27,9 +27,9 @@
       "description": "Villon-Con (vcon) artifact governance and interaction rules",
       "source": {
         "type": "github",
-        "repo": "ibroAi/construct",
+        "repo": "ibroAi/matrix-plane",
         "ref": "main",
-        "path": "modules/ai-vcon"
+        "path": "packages/construct/modules/ai-vcon"
       }
     },
     "ai-spine": {
@@ -37,9 +37,9 @@
       "description": "Governed Execution Spine rules and checklists",
       "source": {
         "type": "github",
-        "repo": "ibroAi/construct",
+        "repo": "ibroAi/matrix-plane",
         "ref": "main",
-        "path": "modules/ai-spine"
+        "path": "packages/construct/modules/ai-spine"
       }
     },
     "ai-infra": {
@@ -47,9 +47,9 @@
       "description": "Infrastructure boundaries and service mapping for AI",
       "source": {
         "type": "github",
-        "repo": "ibroAi/construct",
+        "repo": "ibroAi/matrix-plane",
         "ref": "main",
-        "path": "modules/ai-infra"
+        "path": "packages/construct/modules/ai-infra"
       }
     },
     "ai-test": {
@@ -57,9 +57,9 @@
       "description": "Validation and verification rules for AI-generated code",
       "source": {
         "type": "github",
-        "repo": "ibroAi/construct",
+        "repo": "ibroAi/matrix-plane",
         "ref": "main",
-        "path": "modules/ai-test"
+        "path": "packages/construct/modules/ai-test"
       }
     },
     "ai-collab": {
@@ -67,9 +67,9 @@
       "description": "Multi-LLM collaboration patterns: single-pass rewrite, parallel evaluation, post-decision governance",
       "source": {
         "type": "github",
-        "repo": "ibroAi/construct",
+        "repo": "ibroAi/matrix-plane",
         "ref": "main",
-        "path": "modules/ai-collab"
+        "path": "packages/construct/modules/ai-collab"
       }
     },
     "ai-review": {
@@ -77,9 +77,9 @@
       "description": "Reviewer-builder governance: patterns, protocol, verdicts, briefing templates",
       "source": {
         "type": "github",
-        "repo": "ibroAi/construct",
+        "repo": "ibroAi/matrix-plane",
         "ref": "main",
-        "path": "modules/ai-review"
+        "path": "packages/construct/modules/ai-review"
       }
     }
   }

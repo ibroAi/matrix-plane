@@ -1,0 +1,6 @@
+# Canonical snippets schema (informal YAML shape)
+snippets:
+  - event_id: string
+    short: string
+    medium: string
+    object: any # JSON object

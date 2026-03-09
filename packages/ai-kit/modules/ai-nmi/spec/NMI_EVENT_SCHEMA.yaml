@@ -1,0 +1,20 @@
+# Canonical NMI Event schema (informal YAML shape)
+nmi_event:
+  id: string
+  type: ANCHOR|REFLECTION|MEMORY|REPAIR|DRIFT|ARBITER
+  ts_range:
+    start: timestamp
+    end: timestamp
+  trigger:
+    who: user|assistant
+    quote: string
+  narrative:
+    one_liner: string
+    expanded: string
+  behavioral_contract:
+    do: [string]
+    dont: [string]
+  confidence: float # 0..1
+  evidence:
+    - msg_id: string
+      quote: string

@@ -1,0 +1,11 @@
+{
+  "name": "ai-collab",
+  "version": "0.1.0",
+  "description": "Multi-LLM collaboration patterns: single-pass rewrite, parallel evaluation, post-decision governance",
+  "copies": [
+    {
+      "from": "payload/ai/collab",
+      "to": "ai/collab"
+    }
+  ]
+}

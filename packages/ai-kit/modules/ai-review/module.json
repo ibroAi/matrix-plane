@@ -1,0 +1,11 @@
+{
+  "name": "ai-review",
+  "version": "0.1.0",
+  "description": "Reviewer-builder governance: patterns, protocol, verdicts, briefing templates",
+  "copies": [
+    {
+      "from": "payload/ai/review",
+      "to": "ai/review"
+    }
+  ]
+}

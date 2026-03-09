@@ -1,0 +1,11 @@
+{
+  "name": "ai-vcon",
+  "version": "0.1.0",
+  "description": "Villon-Con (vcon) artifact governance and interaction rules",
+  "copies": [
+    {
+      "from": "payload/ai/vcon",
+      "to": "ai/vcon"
+    }
+  ]
+}

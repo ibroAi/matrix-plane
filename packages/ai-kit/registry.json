@@ -1,0 +1,86 @@
+{
+  "name": "ibroAI ai-kit",
+  "default": "ai",
+  "modules": {
+    "ai": {
+      "latest": "0.1.0",
+      "description": "Universal AI governance folder (/ai) for any project",
+      "source": {
+        "type": "github",
+        "repo": "ibroAi/ai-kit",
+        "ref": "main",
+        "path": "modules/ai"
+      }
+    },
+    "ai-code": {
+      "latest": "0.1.0",
+      "description": "Code-specific add-on for /ai (snapshots, review rules, checklists)",
+      "source": {
+        "type": "github",
+        "repo": "ibroAi/ai-kit",
+        "ref": "main",
+        "path": "modules/ai-code"
+      }
+    },
+    "ai-vcon": {
+      "latest": "0.1.0",
+      "description": "Villon-Con (vcon) artifact governance and interaction rules",
+      "source": {
+        "type": "github",
+        "repo": "ibroAi/ai-kit",
+        "ref": "main",
+        "path": "modules/ai-vcon"
+      }
+    },
+    "ai-spine": {
+      "latest": "0.1.0",
+      "description": "Governed Execution Spine rules and checklists",
+      "source": {
+        "type": "github",
+        "repo": "ibroAi/ai-kit",
+        "ref": "main",
+        "path": "modules/ai-spine"
+      }
+    },
+    "ai-infra": {
+      "latest": "0.1.0",
+      "description": "Infrastructure boundaries and service mapping for AI",
+      "source": {
+        "type": "github",
+        "repo": "ibroAi/ai-kit",
+        "ref": "main",
+        "path": "modules/ai-infra"
+      }
+    },
+    "ai-test": {
+      "latest": "0.1.0",
+      "description": "Validation and verification rules for AI-generated code",
+      "source": {
+        "type": "github",
+        "repo": "ibroAi/ai-kit",
+        "ref": "main",
+        "path": "modules/ai-test"
+      }
+    },
+    "ai-collab": {
+      "latest": "0.1.0",
+      "description": "Multi-LLM collaboration patterns: single-pass rewrite, parallel evaluation, post-decision governance",
+      "source": {
+        "type": "github",
+        "repo": "ibroAi/ai-kit",
+        "ref": "main",
+        "path": "modules/ai-collab"
+      }
+    },
+    "ai-review": {
+      "latest": "0.1.0",
+      "description": "Reviewer-builder governance: patterns, protocol, verdicts, briefing templates",
+      "source": {
+        "type": "github",
+        "repo": "ibroAi/ai-kit",
+        "ref": "main",
+        "path": "modules/ai-review"
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+# Canonical state trace schema (informal YAML shape)
+state_trace:
+  - ts: timestamp
+    from: BASELINE|STABLE|DIVERGENCE|REALIGNED|COLLAPSE
+    to: BASELINE|STABLE|DIVERGENCE|REALIGNED|COLLAPSE
+    because_event: string # event id

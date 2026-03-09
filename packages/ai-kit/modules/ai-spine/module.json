@@ -1,0 +1,11 @@
+{
+  "name": "ai-spine",
+  "version": "0.1.0",
+  "description": "Governed Execution Spine rules and checklists",
+  "copies": [
+    {
+      "from": "payload/ai/spine",
+      "to": "ai/spine"
+    }
+  ]
+}

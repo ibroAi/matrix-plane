@@ -1,0 +1,11 @@
+{
+  "name": "ai-infra",
+  "version": "0.1.0",
+  "description": "Infrastructure boundaries and service mapping for AI",
+  "copies": [
+    {
+      "from": "payload/ai/infra",
+      "to": "ai/infra"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+events:
+  - id: "evt_001"
+    type: ANCHOR
+    ts_range: { start: "2026-01-31T00:00:00Z", end: "2026-01-31T00:00:00Z" }
+    trigger: { who: user, quote: "Bro mode. Geen empathie. Geen vragen." }
+    narrative:
+      one_liner: "Session baseline is direct, non-therapeutic, no questions."
+      expanded: "We operate in a direct analytical style; avoid coaching and question loops."
+    behavioral_contract:
+      do: ["be direct", "make assumptions", "give analysis"]
+      dont: ["ask clarifying questions", "therapize", "over-explain"]
+    confidence: 0.9
+    evidence:
+      - msg_id: "msg_123"
+        quote: "Bro mode. Geen empathie. Geen vragen."

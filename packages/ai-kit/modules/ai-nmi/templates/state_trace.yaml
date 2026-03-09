@@ -1,0 +1,5 @@
+state_trace:
+  - ts: "2026-01-31T00:00:00Z"
+    from: BASELINE
+    to: STABLE
+    because_event: "evt_001"

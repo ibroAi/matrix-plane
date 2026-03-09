@@ -1,0 +1,11 @@
+{
+  "name": "ai-test",
+  "version": "0.1.0",
+  "description": "Validation and verification rules for AI-generated code",
+  "copies": [
+    {
+      "from": "payload/ai/test",
+      "to": "ai/test"
+    }
+  ]
+}

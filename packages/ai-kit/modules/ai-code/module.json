@@ -1,0 +1,11 @@
+{
+  "name": "ai-code",
+  "version": "0.1.0",
+  "description": "Code-specific add-on for /ai (snapshots, review rules, checklists)",
+  "copies": [
+    {
+      "from": "payload/ai/code",
+      "to": "ai/code"
+    }
+  ]
+}

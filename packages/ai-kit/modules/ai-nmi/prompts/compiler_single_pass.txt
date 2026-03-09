@@ -1,0 +1,20 @@
+You receive a chatlog as JSON items (array). Treat it as an event stream.
+
+Task:
+1) Detect NMI events: ANCHOR, REFLECTION, MEMORY, REPAIR, DRIFT, ARBITER.
+2) For each event: create narrative + behavioral contract (do/dont) + confidence + max 2 evidence quotes.
+3) Build a state_trace using ONLY these states:
+   BASELINE, STABLE, DIVERGENCE, REALIGNED, COLLAPSE
+   and ONLY these transitions:
+   BASELINE→STABLE, STABLE→DIVERGENCE, DIVERGENCE→REALIGNED, REALIGNED→STABLE,
+   DIVERGENCE→COLLAPSE, COLLAPSE→BASELINE
+4) Generate injection snippets (short/medium/object) per event (especially ANCHOR/REPAIR/MEMORY).
+
+Output EXACTLY three YAML documents separated by a line containing only:
+---
+
+1) events.yaml
+2) state_trace.yaml
+3) snippets.yaml
+
+No explanations. No extra text.

@@ -1,0 +1,11 @@
+{
+  "name": "ai",
+  "version": "0.1.0",
+  "description": "Universal AI governance folder (/ai) for any project",
+  "copies": [
+    {
+      "from": "payload/ai",
+      "to": "ai"
+    }
+  ]
+}

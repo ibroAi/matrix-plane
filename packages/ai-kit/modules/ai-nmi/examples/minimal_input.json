@@ -1,0 +1,20 @@
+[
+  {
+    "id": "msg_1",
+    "ts": "2026-01-31T10:00:00Z",
+    "role": "user",
+    "content_raw": "Bro mode. Geen empathie. Geen vragen."
+  },
+  {
+    "id": "msg_2",
+    "ts": "2026-01-31T10:00:10Z",
+    "role": "assistant",
+    "content_raw": "Ok. Direct. Geen vragen."
+  },
+  {
+    "id": "msg_3",
+    "ts": "2026-01-31T10:01:00Z",
+    "role": "assistant",
+    "content_raw": "Toch even: kan je dat toelichten?"
+  }
+]

@@ -7,7 +7,7 @@
   "type": "module",
   "main": "dist/cli.js",
   "bin": {
-    "ibro": "dist/cli.js"
+    "operator": "dist/cli.js"
   },
   "scripts": {
     "build": "tsc",

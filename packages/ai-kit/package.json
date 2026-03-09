@@ -1,7 +1,0 @@
-{
-  "name": "@matrix-plane/ai-kit",
-  "version": "0.1.0",
-  "description": "Module registry for ibro-cli — AI governance folder templates",
-  "license": "MIT",
-  "private": true
-}

@@ -1,5 +1,5 @@
 {
-  "name": "@ibroai/the-matrix-operator",
+  "name": "@ibroai/operator",
   "version": "0.1.0",
   "description": "Framework-style CLI to drop construct modules into any project",
   "license": "MIT",

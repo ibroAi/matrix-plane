@@ -1,0 +1,11 @@
+{
+  "name": "ai-nmi",
+  "version": "0.1.0",
+  "description": "Narrative Memory Injection — behavioral memory state machine",
+  "copies": [
+    { "from": "spec",      "to": "ai/nmi/spec"      },
+    { "from": "prompts",   "to": "ai/nmi/prompts"   },
+    { "from": "templates", "to": "ai/nmi/templates" },
+    { "from": "examples",  "to": "ai/nmi/examples"  }
+  ]
+}

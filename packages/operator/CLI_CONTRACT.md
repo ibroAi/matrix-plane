@@ -1,33 +1,38 @@
-# ibro — Command Contract (MVP)
+# operator — CLI Contract
 
-This document is the **behavioral contract** for the `ibro` CLI.
-It defines **what each command must do**, **inputs/outputs**, and **safety rules**.
-Implementation details are intentionally out of scope.
+The behavioral contract for `@ibroai/operator`.
+Defines what each command does, inputs/outputs, and safety rules.
+Implementation details are out of scope.
+
+---
+
+## Usage
+
+```bash
+npx @ibroai/operator <command> [options]
+```
 
 ---
 
 ## Global Rules
 
-### Project root
-- All commands operate relative to **current working directory** unless `--to <path>` is provided.
+### Working directory
+All commands operate relative to **current working directory** unless `--to <path>` is provided.
 
 ### Registry
-- CLI reads module metadata from the **construct registry**:
-  - default registry: `ibroAi/construct`
-  - registry file: `registry.json`
-
-### Target paths
-- Modules are copied into the target project (default `.`).
-- Standard install root inside target project: `./ai`
+Default registry: `ibroAi/matrix-plane` → `packages/construct/registry.json`
+Override with `--registry <org/repo>`.
 
 ### Lockfile
-- After any install/add/update operation, CLI must write/update:
-  - `./.ibro.lock.json` in the target project root.
+After any install/add/update/remove operation, operator writes/updates:
+```
+.operator.lock.json
+```
 
-**Lockfile schema (MVP):**
+**Schema:**
 ```json
 {
-  "registry": "ibroAi/construct",
+  "registry": "ibroAi/matrix-plane",
   "installed": {
     "ai": "0.1.0",
     "ai-code": "0.1.0"
@@ -35,10 +40,7 @@ Implementation details are intentionally out of scope.
 }
 ```
 
-### Safety / overwrite policy (MVP)
-**Overwrite allowed (managed by ibro):**
-- `ai/governance/**`
-- `ai/templates/**`
+### Overwrite policy
 
 **Never overwrite (user-owned):**
 - `ai/context.md`
@@ -46,84 +48,138 @@ Implementation details are intentionally out of scope.
 - `ai/backlog.md`
 - `ai/work/**`
 
-If a file is user-owned and exists:
-- keep existing file
-- print a warning: `skipped user-owned file: <path>`
+**Always overwrite (framework-owned):**
+- `ai/governance/**`
+- `ai/templates/**`
+- `ai/<module>/**`
 
-### Exit codes (MVP)
+Skipped files print: `skipped (user-owned): ai/context.md`
+
+### Exit codes
 - `0` success
-- `1` generic failure (network, permissions, invalid args, unknown module, etc.)
+- `1` failure (network, permissions, unknown module, invalid args)
 
 ---
 
-## Command: `ibro init`
+## Module Aliases
 
-### Syntax
-```bash
-ibro init [--to <path>] [--registry <org/repo>]
+Matrix-themed aliases resolve to real module names:
+
+```
+redpill   → ai
+kung-fu   → ai-code
+sparring  → ai-collab
+oracle    → ai-review
+sentinel  → ai-test
+mainframe → ai-spine
+deja-vu   → ai-nmi
+architect → ai-infra
+construct → ai-vcon
 ```
 
-### Behavior
-1. Determine target project root:
-   - default: current directory
-   - if `--to`: use that path
-2. Resolve registry:
-   - default: `ibroAi/construct`
-   - if `--registry`: override for this run (and store in lockfile)
-3. Install **default module** from registry (registry `"default"` key, expected to be `"ai"` in MVP)
-4. Copy module payload into target project:
-   - `payload/ai` → `./ai`
-5. Apply overwrite policy (see Global Rules).
-6. Write/update `.ibro.lock.json`.
-7. Print next steps:
-   - `ibro add ai-code`
-   - `ibro list`
+All commands accept both the real name and the alias.
 
 ---
 
-## Command: `ibro add`
+## Commands
 
-### Syntax
+### `operator init`
+
 ```bash
-ibro add <module> [--to <path>] [--registry <org/repo>]
+npx @ibroai/operator init [--to <path>] [--registry <org/repo>]
 ```
 
-### Behavior
-1. Validate `<module>` exists in registry.
-2. Download/read module definition.
-3. Copy module payload according to module `copies` mapping.
-4. Apply overwrite policy (Global Rules).
-5. Update `.ibro.lock.json`.
-6. Print summary including skipped user-owned files.
+1. Determine target root (`cwd` or `--to`)
+2. Resolve registry
+3. Install default module (`ai` / redpill)
+4. Apply overwrite policy
+5. Write `.operator.lock.json`
+6. Print next steps
 
 ---
 
-## Command: `ibro list`
+### `operator add <module>`
 
-### Syntax
 ```bash
-ibro list [--registry <org/repo>]
+npx @ibroai/operator add <module> [--to <path>] [--registry <org/repo>]
 ```
 
-### Behavior
-- Read registry.
-- Print list: module name, latest version, description.
+1. Resolve alias if needed
+2. Validate module exists in registry
+3. Download module payload from GitHub
+4. Copy files per module `copies` spec
+5. Apply overwrite policy
+6. Update `.operator.lock.json`
+7. Print summary + skipped files
 
 ---
 
-## Command: `ibro update` (optional in MVP)
+### `operator remove <module>`
 
-### Syntax
 ```bash
-ibro update [--to <path>] [--registry <org/repo>]
+npx @ibroai/operator remove <module> [--to <path>]
 ```
 
-### Behavior (MVP-simple)
-- Read `.ibro.lock.json` modules.
-- Re-apply each module using registry latest.
-- Respect overwrite rules.
-- Update `.ibro.lock.json`.
-
-If not implemented: do not ship the command.
+1. Resolve alias if needed
+2. Validate module is installed (check lockfile)
+3. Remove **framework-owned files only** for that module
+4. Never touch user-owned files
+5. Update `.operator.lock.json`
 
 ---
+
+### `operator list`
+
+```bash
+npx @ibroai/operator list [--registry <org/repo>] [--installed]
+```
+
+- Default: all available modules from registry (name, alias, version, description)
+- `--installed`: only modules in `.operator.lock.json`
+
+**Output format:**
+```
+redpill   (ai)         0.1.0  Universal AI governance folder
+kung-fu   (ai-code)    0.1.0  Code rules, review checklist
+oracle    (ai-review)  0.1.0  Reviewer-builder governance
+...
+```
+
+---
+
+### `operator status`
+
+```bash
+npx @ibroai/operator status [--to <path>]
+```
+
+Compares `.operator.lock.json` against files on disk.
+
+**Output:**
+```
+✓ ai          0.1.0  installed
+✓ ai-code     0.1.0  installed
+✗ ai-review   —      missing files
+```
+
+---
+
+### `operator update [module]`
+
+```bash
+npx @ibroai/operator update [module] [--to <path>] [--registry <org/repo>]
+```
+
+- Without module: re-apply all installed modules at registry latest
+- With module: update that module only
+- Respects overwrite policy
+- Updates `.operator.lock.json`
+
+---
+
+## Not in scope (MVP)
+
+- No version pinning (always `latest`)
+- No offline mode
+- No private registries
+- No interactive prompts

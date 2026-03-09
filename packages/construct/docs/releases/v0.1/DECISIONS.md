@@ -1,6 +1,6 @@
 # v0.1 — Decisions
 
-- ai-kit is content-only
+- construct is content-only
 - modules are copied, not executed
 - structure is more important than flexibility
 - clarity beats cleverness

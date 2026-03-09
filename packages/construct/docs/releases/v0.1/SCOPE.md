@@ -1,6 +1,6 @@
 # v0.1 — Scope
 
-This version establishes the foundation of ai-kit.
+This version establishes the foundation of construct.
 
 Focus:
 - clear module structure

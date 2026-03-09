@@ -1,6 +1,6 @@
 # /ai
 
-Note: This repo uses the same governance structure shipped in `ibroAi/ai-kit` modules.
+Note: This repo uses the same governance structure shipped in `ibroAi/construct` modules.
 
 This folder defines how AI is allowed to behave in this project.
 It is intentionally explicit and opinionated.

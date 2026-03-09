@@ -44,13 +44,13 @@ If you want **clarity, structure, and control**, you're in the right place.
 
 ## Modules
 
-ibro-cli installs modules from **ai-kit** (`@minion-protocol/ai-kit`):
+ibro-cli installs modules from **construct** (`@minion-protocol/construct`):
 
 - `ai` — universal AI governance folder
 - `ai-code` — code-repo add-on
 - `ai-nmi` — Narrative Memory Injection
 
-Registry source: `ibroAi/ai-kit` (GitHub, fetched at runtime)
+Registry source: `ibroAi/construct` (GitHub, fetched at runtime)
 
 ---
 

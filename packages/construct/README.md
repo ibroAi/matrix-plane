@@ -1,4 +1,4 @@
-# ai-kit
+# construct
 
 **Drop-in module registry for ibro-cli — AI governance folder templates, structure, and reusable building blocks.**
 
@@ -13,7 +13,7 @@ Just structure you can trust.
 
 ## What this is
 
-`ai-kit` is the content layer of the ibro ecosystem.
+`construct` is the content layer of the ibro ecosystem.
 
 It provides:
 - reusable `/ai` folder templates
@@ -124,15 +124,15 @@ Includes schemas (NMI_EVENT_SCHEMA, STATE_TRACE_SCHEMA), LLM prompts, templates 
 
 ## Package (monorepo)
 
-**Package:** `@minion-protocol/ai-kit`
-**Location:** `packages/minion-protocol/libs/ai-kit`
+**Package:** `@minion-protocol/construct`
+**Location:** `packages/minion-protocol/libs/construct`
 
 ```bash
 # Geen build stap — pure content package
-npm list --workspaces | grep ai-kit
+npm list --workspaces | grep construct
 ```
 
-**Runtime source:** `ibro-cli` downloadt modules van `ibroAi/ai-kit` op GitHub.
+**Runtime source:** `ibro-cli` downloadt modules van `ibroAi/construct` op GitHub.
 De monorepo-kopie is de lokale source of truth voor development.
 
 ---
@@ -140,7 +140,7 @@ De monorepo-kopie is de lokale source of truth voor development.
 ## Package structure
 
 ```
-packages/minion-protocol/libs/ai-kit/
+packages/minion-protocol/libs/construct/
 ├── registry.json          # Module index (name, version, GitHub source)
 ├── modules/
 │   ├── ai/                # Base governance layer

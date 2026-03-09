@@ -1,5 +1,5 @@
 {
-  "name": "ibroAI ai-kit",
+  "name": "ibroAI construct",
   "default": "ai",
   "modules": {
     "ai": {
@@ -7,7 +7,7 @@
       "description": "Universal AI governance folder (/ai) for any project",
       "source": {
         "type": "github",
-        "repo": "ibroAi/ai-kit",
+        "repo": "ibroAi/construct",
         "ref": "main",
         "path": "modules/ai"
       }
@@ -17,7 +17,7 @@
       "description": "Code-specific add-on for /ai (snapshots, review rules, checklists)",
       "source": {
         "type": "github",
-        "repo": "ibroAi/ai-kit",
+        "repo": "ibroAi/construct",
         "ref": "main",
         "path": "modules/ai-code"
       }
@@ -27,7 +27,7 @@
       "description": "Villon-Con (vcon) artifact governance and interaction rules",
       "source": {
         "type": "github",
-        "repo": "ibroAi/ai-kit",
+        "repo": "ibroAi/construct",
         "ref": "main",
         "path": "modules/ai-vcon"
       }
@@ -37,7 +37,7 @@
       "description": "Governed Execution Spine rules and checklists",
       "source": {
         "type": "github",
-        "repo": "ibroAi/ai-kit",
+        "repo": "ibroAi/construct",
         "ref": "main",
         "path": "modules/ai-spine"
       }
@@ -47,7 +47,7 @@
       "description": "Infrastructure boundaries and service mapping for AI",
       "source": {
         "type": "github",
-        "repo": "ibroAi/ai-kit",
+        "repo": "ibroAi/construct",
         "ref": "main",
         "path": "modules/ai-infra"
       }
@@ -57,7 +57,7 @@
       "description": "Validation and verification rules for AI-generated code",
       "source": {
         "type": "github",
-        "repo": "ibroAi/ai-kit",
+        "repo": "ibroAi/construct",
         "ref": "main",
         "path": "modules/ai-test"
       }
@@ -67,7 +67,7 @@
       "description": "Multi-LLM collaboration patterns: single-pass rewrite, parallel evaluation, post-decision governance",
       "source": {
         "type": "github",
-        "repo": "ibroAi/ai-kit",
+        "repo": "ibroAi/construct",
         "ref": "main",
         "path": "modules/ai-collab"
       }
@@ -77,7 +77,7 @@
       "description": "Reviewer-builder governance: patterns, protocol, verdicts, briefing templates",
       "source": {
         "type": "github",
-        "repo": "ibroAi/ai-kit",
+        "repo": "ibroAi/construct",
         "ref": "main",
         "path": "modules/ai-review"
       }

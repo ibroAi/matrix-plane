@@ -29,7 +29,7 @@ It DOES:
 
 ## 2. The Two Core Repositories
 
-### `ai-kit`
+### `construct`
 **What it is:**
 - A registry of **drop-in modules**
 - Each module is a **folder payload**
@@ -56,7 +56,7 @@ It DOES:
 
 ### `ibro-cli`
 **What it is:**
-- A CLI that installs modules from `ai-kit`
+- A CLI that installs modules from `construct`
 - A structure bootstrapper
 - A safety layer for file operations
 
@@ -70,14 +70,14 @@ It DOES:
 **What it does NOT:**
 - run AI
 - interpret prompts
-- execute logic from ai-kit
+- execute logic from construct
 - contain business logic
 
 ---
 
 ## 3. The Relationship (Important)
 
-ai-kit → defines structure
+construct → defines structure
 ibro-cli → installs structure
 project → uses structure
 
@@ -96,14 +96,14 @@ If you are asking:
 
 > “Should this run something?”
 
-→ It does **not** belong in ai-kit  
+→ It does **not** belong in construct  
 → It probably does **not** belong in ibro-cli either
 
 If you are asking:
 
 > “Should this define how work is structured?”
 
-→ It belongs in ai-kit
+→ It belongs in construct
 
 If you are asking:
 
@@ -145,7 +145,7 @@ In the future, other layers *may* exist:
 - tooling
 - visualizers
 
-But they will always be **separate from ai-kit**  
+But they will always be **separate from construct**  
 and **never blur responsibility boundaries**.
 
 ---

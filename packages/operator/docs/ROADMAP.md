@@ -26,7 +26,7 @@ Ship a usable CLI with a clear mental model and minimal moving parts.
 
 ### Scope
 - Initialize an AI-governed project
-- Install modules from `ai-kit`
+- Install modules from `construct`
 - Keep everything transparent and inspectable
 
 ### Features

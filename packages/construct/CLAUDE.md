@@ -1,7 +1,7 @@
-# ai-kit — Package Instructions
+# construct — Package Instructions
 
-**Package:** `@minion-protocol/ai-kit`
-**Location:** `packages/libs/ai-kit`
+**Package:** `@minion-protocol/construct`
+**Location:** `packages/libs/construct`
 
 ---
 
@@ -18,7 +18,7 @@ Pure content package — geen code, geen build stap, geen runtime. Bevat folder-
 | `registry.json` | Module index — alle modules met naam, versie, GitHub source |
 | `modules/{name}/module.json` | Per-module metadata en `copies` spec |
 | `modules/{name}/payload/` | Bestanden die 1:1 gekopieerd worden |
-| `docs/MENTAL_MODEL.md` | Scope en grenzen van ai-kit |
+| `docs/MENTAL_MODEL.md` | Scope en grenzen van construct |
 | `docs/ROADMAP.md` | v0.1 → toekomstige evolutie |
 
 ---
@@ -28,7 +28,7 @@ Pure content package — geen code, geen build stap, geen runtime. Bevat folder-
 ```bash
 # Geen build stap — pure content
 # Workspace check:
-npm list --workspaces | grep ai-kit
+npm list --workspaces | grep construct
 ```
 
 ---
@@ -64,7 +64,7 @@ Elke nieuwe module moet in `registry.json` staan:
       "description": "...",
       "source": {
         "type": "github",
-        "repo": "ibroAi/ai-kit",
+        "repo": "ibroAi/construct",
         "ref": "main",
         "path": "modules/{naam}"
       }

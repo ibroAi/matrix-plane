@@ -1,8 +1,8 @@
-# ai-kit — Roadmap
+# construct — Roadmap
 
 ## Vision
 
-ai-kit exists to provide **reliable, reusable structure** for AI-assisted projects.
+construct exists to provide **reliable, reusable structure** for AI-assisted projects.
 
 It is not a framework.
 It is not an agent system.

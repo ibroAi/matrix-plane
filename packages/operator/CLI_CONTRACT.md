@@ -12,8 +12,8 @@ Implementation details are intentionally out of scope.
 - All commands operate relative to **current working directory** unless `--to <path>` is provided.
 
 ### Registry
-- CLI reads module metadata from the **ai-kit registry**:
-  - default registry: `ibroAi/ai-kit`
+- CLI reads module metadata from the **construct registry**:
+  - default registry: `ibroAi/construct`
   - registry file: `registry.json`
 
 ### Target paths
@@ -27,7 +27,7 @@ Implementation details are intentionally out of scope.
 **Lockfile schema (MVP):**
 ```json
 {
-  "registry": "ibroAi/ai-kit",
+  "registry": "ibroAi/construct",
   "installed": {
     "ai": "0.1.0",
     "ai-code": "0.1.0"
@@ -68,7 +68,7 @@ ibro init [--to <path>] [--registry <org/repo>]
    - default: current directory
    - if `--to`: use that path
 2. Resolve registry:
-   - default: `ibroAi/ai-kit`
+   - default: `ibroAi/construct`
    - if `--registry`: override for this run (and store in lockfile)
 3. Install **default module** from registry (registry `"default"` key, expected to be `"ai"` in MVP)
 4. Copy module payload into target project:

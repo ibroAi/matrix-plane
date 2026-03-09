@@ -5,8 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build -w @matrix-plane/ibro-cli",
-    "test": "npm test -w @matrix-plane/ibro-cli"
+    "build": "npm run build -w @ibroai/the-matrix-operator",
+    "test": "npm test -w @ibroai/the-matrix-operator"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"

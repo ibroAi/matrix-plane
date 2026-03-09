@@ -1,0 +1,14 @@
+{
+  "name": "matrix-plane",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @matrix-plane/ibro-cli",
+    "test": "npm test -w @matrix-plane/ibro-cli"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
